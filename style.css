@@ -1,23 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+    --light-blue: #93B7BE;
+    --cream-white: #defdf3;
+    --white: #ffffff;
+    --dark-purple: #1f113b;
+    --resin-black: #1B1725;
+    --gold-light: #fef571;
+    --blue: #2578B0;
+    --silver: #A7A7A7;
+}
+
 html {
     margin: 0;
     padding: 0;
     border: 0;
     width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
 }
 body {
     margin: 0;
     padding: 0;
     border: 0;
     width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    background-color: var(--resin-black);
+    color: var(--cream-white)
 }
 
 header {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: var(--white);
+    padding: .5rem;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .logo {
@@ -42,7 +65,17 @@ ul {
 li {
     padding: .5rem;
     border-radius: .5rem;
-    border: .2rem solid black;
+    border: .2rem solid var(--silver);
+    background-color: var(--white);
+    color: var(--resin-black);
+    font-weight: bold;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: var(--resin-black);
+    color: var(--cream-white);
+    border-color: var(--gold-light);
 }
 
 
@@ -55,11 +88,39 @@ main {
 }
 
 .main-promotion {
-    text-align: center;
-    align-content: center;
+    display: flex;
+    justify-content: space-evenly;
     height: 15vh;
-    border: .2rem solid black;
+    border: .2rem solid var(--gold-light);
     border-radius: .5rem;
+}
+
+.main-promotion:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: .5rem .5rem 50px var(--gold-light);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.promotion-text {
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.wedding-ring {
+    width: 50%;
+    height: 100%;
+    background-image: url(assets/jewel-7389356_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    align-self: flex-end;
 }
 
 .main-articles {
@@ -70,24 +131,79 @@ main {
 }
 
 article {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 5rem;
-    border: .2rem solid black;
+    border: .2rem solid var(--white);
     border-radius: .5rem;
     text-align: center;
     align-content: center;
+    background-color: var(--dark-purple);
+}
+
+article:hover {
+    cursor: pointer;
+    box-shadow: 1rem 1rem 2px var(--gold-light);
+    transform: scale(1.05);
+    transition: box-shadow .5s, transform .2s;
+    border-color: var(--gold-light);
+}
+
+.articles-text {
+    width: 100%;
+
+}
+
+.article-image-1 {
+    width: 100%;
+    height: 10rem;
+    background-image: url(assets/gold-jewelry-3790542_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.article-image-2 {
+    width: 100%;
+    height: 10rem;
+    background-image: url(assets/fashion-7544012_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.article-image-3 {
+    width: 100%;
+    height: 10rem;
+    background-image: url(assets/gold-665722_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 
 footer {
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    width: 100%100vw;
     align-self: center;
     justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--blue);
 }
 
 footer > img.logo {
     transform: scale(.5);
+}
+
+footer > p {
+    color: var(--resin-black);
+    font-size: large;
+    font-weight: bolder;
+}
+
+footer > p:hover {
+    cursor: pointer;
 }
 
 p {
